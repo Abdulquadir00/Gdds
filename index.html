@@ -97,155 +97,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-  <style>
-    /* Custom CSS for enhanced mobile responsiveness */
-    body {
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-    }
-    .container {
-      max-width: 100%;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-    .nav-menu a, .mobile-menu a {
-      transition: color 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .mobile-menu {
-      transition: transform 0.3s ease;
-      transform: translateY(-100%);
-    }
-    .mobile-menu.active {
-      transform: translateY(0);
-    }
-    .modal-content {
-      width: 90%;
-      max-width: 500px;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-    .slideshow .slide {
-      background-size: cover;
-      background-position: center;
-    }
-    .hero-overlay {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
-    }
-    .offer-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .offer-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .portfolio-img img {
-      transition: transform 0.3s ease;
-    }
-    .portfolio-img:hover img {
-      transform: scale(1.05);
-    }
-    .whatsapp-icon {
-      position: fixed;
-      top: 50%;
-      right: 1.5rem;
-      transform: translateY(-50%);
-      z-index: 50;
-    }
-    .back-to-top {
-      bottom: 1.5rem;
-      right: 1.5rem;
-    }
-    .nav-icon {
-      width: 20px;
-      height: 20px;
-    }
-    @media (max-width: 768px) {
-      .logo-container img {
-        max-width: 120px;
-      }
-      .logo-title {
-        font-size: 1rem;
-      }
-      .logo-subtitle {
-        font-size: 0.75rem;
-      }
-      .hero-section h1 {
-        font-size: 2rem;
-      }
-      .hero-section p {
-        font-size: 1rem;
-      }
-      .section-heading {
-        font-size: 2rem;
-      }
-      .offer-card {
-        padding: 1rem;
-      }
-      .offer-card h3 {
-        font-size: 1.25rem;
-      }
-      .offer-card ul {
-        font-size: 0.9rem;
-      }
-      .portfolio-img img, .gallery-img img {
-        height: 200px;
-      }
-      .contact-info {
-        padding: 1.5rem;
-      }
-      .map-container iframe {
-        height: 300px;
-      }
-      .footer-section {
-        text-align: center;
-      }
-      .social-links {
-        justify-content: center;
-      }
-      .whatsapp-icon {
-        right: 1rem;
-        padding: 0.75rem;
-      }
-      .nav-icon {
-        width: 18px;
-        height: 18px;
-      }
-    }
-    @media (max-width: 640px) {
-      .hero-section h1 {
-        font-size: 1.75rem;
-      }
-      .hero-section p {
-        font-size: 0.9rem;
-      }
-      .quote-btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-      }
-      .modal-content {
-        padding: 1rem;
-      }
-      .form-input {
-        padding: 0.75rem;
-      }
-      .section-heading {
-        font-size: 1.75rem;
-      }
-      .portfolio-img img, .gallery-img img {
-        height: 150px;
-      }
-      .contact-item {
-        font-size: 0.9rem;
-      }
-      .nav-icon {
-        width: 16px;
-        height: 16px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-poppins text-gray-800 bg-gray-100">
   <!-- Google Tag Manager (noscript) -->
@@ -304,7 +156,7 @@
         Home
       </a>
       <a href="#what-we-offer" class="block px-4 py-2 text-gray-900 hover:text-orange-600 text-base flex items-center gap-2">
-        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
+        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4Mppercase 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
         Services
       </a>
       <a href="#portfolio" class="block px-4 py-2 text-gray-900 hover:text-orange-600 text-base flex items-center gap-2">
@@ -312,7 +164,7 @@
         Portfolio
       </a>
       <a href="#gallery" class="block px-4 py-2 text-gray-900 hover:text-orange-600 text-base flex items-center gap-2">
-        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2subj 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
         Gallery
       </a>
       <a href="#connect" class="block px-4 py-2 text-gray-900 hover:text-orange-600 text-base flex items-center gap-2">
@@ -338,6 +190,7 @@
         </button>
       </nav>
       <form id="contactForm" class="flex flex-col gap-3 sm:gap-4" novalidate>
+        <input type="hidden" id="contactService" name="service">
         <div class="relative">
           <label for="contactName" class="sr-only">Name</label>
           <input type="text" id="contactName" placeholder="Your Name" required class="form-input w-full p-2 sm:p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50 text-sm sm:text-base">
@@ -380,161 +233,125 @@
   </header>
 
   <!-- What We Offer Section -->
-  <section id="what-we-offer" class="py-12 sm:py-20 bg-gradient-to-r from-white to-gray-100">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col sm:flex-row justify-between items-center mb-8 sm:mb-12">
-        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 section-heading">What We Offer</h2>
-        <button onclick="openModal()" class="bg-red-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105 mt-4 sm:mt-0 text-sm sm:text-base">Get Free Quote</button>
+  ```html
+<!-- What We Offer Section -->
+<section id="what-we-offer" class="py-12 sm:py-20 bg-gradient-to-r from-white to-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-5xl font-bold text-gray-900 section-heading">Our Services</h2>
+      <p class="text-gray-600 mt-2 text-base sm:text-lg">Comprehensive interior and exterior design solutions tailored to your needs.</p>
+      <button onclick="openModal()" class="mt-4 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 text-base sm:text-lg">Get Free Quote</button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" x-data="accordionServiceData()" x-init="init()">
+      <!-- Services Accordion -->
+      <div class="bg-white rounded-xl shadow-xl p-6 sm:p-8 col-span-1 md:col-span-2 lg:col-span-3" data-aos="fade-up">
+        <div class="flex items-center mb-6">
+          <i class="fas fa-home text-orange-600 text-3xl mr-3" aria-hidden="true"></i> <!-- Replaced fa-paint-brush to test -->
+          <h3 class="text-2xl sm:text-3xl font-semibold text-orange-600">Explore Our Services</h3>
+        </div>
+        <!-- Accordion Content -->
+        <div x-show="categories.length">
+          <template x-for="(category, index) in categories" :key="index">
+            <div class="border-b border-gray-200 py-3">
+              <button
+                class="w-full text-left font-semibold text-gray-800 flex justify-between items-center accordion-button p-3 rounded-lg hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
+                @click="open = open === index ? null : index"
+                :aria-expanded="open === index"
+                :aria-controls="'accordion-content-' + index"
+              >
+                <div class="flex items-center">
+                  <i x-bind:class="category.icon" class="text-orange-600 mr-2 text-xl" aria-hidden="true"></i>
+                  <img x-bind:src="category.image" class="w-8 h-8 mr-2 object-cover rounded hidden sm:block" loading="lazy" x-bind:alt="category.name + ' thumbnail'">
+                  <span x-text="category.name" class="text-lg sm:text-xl"></span>
+                </div>
+                <span x-text="open === index ? '-' : '+'" class="text-xl"></span>
+              </button>
+              <div
+                :id="'accordion-content-' + index"
+                x-show="open === index"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100 transform translate-y-0"
+                x-transition:leave-end="opacity-0 transform -translate-y-2"
+                class="pl-6 text-gray-600 text-sm sm:text-base mt-3"
+              >
+                <ul class="list-disc pl-4 space-y-2">
+                  <template x-for="item in category.items" :key="item">
+                    <li x-text="item"></li>
+                  </template>
+                </ul>
+                <button
+                  @click="openModalWithService(category.name)"
+                  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 text-sm sm:text-base"
+                >
+                  Get Quote for <span x-text="category.name"></span>
+                </button>
+              </div>
+            </div>
+          </template>
+        </div>
+        <!-- Empty State -->
+        <div x-show="!categories.length" class="text-gray-600 text-sm sm:text-base">
+          No services available at the moment. Please contact us at <a href="tel:+917050050786" class="text-orange-600 hover:underline">+91 7050050786</a>.
+        </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-        <!-- Detailed Services -->
-        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 offer-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="flex items-center mb-4">
-            <i class="fas fa-paint-brush text-orange-600 text-xl sm:text-2xl mr-2 offer-icon" aria-hidden="true"></i>
-            <h3 class="text-xl sm:text-2xl font-semibold text-orange-600">Our Services</h3>
+      <!-- Warranty -->
+      <div class="bg-white rounded-xl shadow-lg p-6 offer-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-shield-alt text-orange-600 text-2xl mr-3 offer-icon" aria-hidden="true"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold text-orange-600">Warranty</h3>
+        </div>
+        <ul class="list-disc list-inside text-gray-600 mb-4 text-sm sm:text-base">
+          <li><strong>Up to 10 Years Warranty</strong> - on furniture and fittings.</li>
+          <li><strong>Material Assurance</strong> - Only certified, high-quality materials used.</li>
+          <li><strong>Workmanship Guarantee</strong> - Flawless finish and expert craftsmanship backed by warranty.</li>
+          <li><strong>After-Sales Support</strong> - Dedicated service team for maintenance and support.</li>
+        </ul>
+      </div>
+      <!-- Technology & Science -->
+      <div class="bg-white rounded-xl shadow-lg p-6 offer-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-lightbulb text-orange-600 text-2xl mr-3 offer-icon" aria-hidden="true"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold text-orange-600">Technology & Science</h3>
+        </div>
+        <div class="space-y-4 mb-4 text-sm sm:text-base">
+          <div class="flex items-start">
+            <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
+            <p class="text-gray-600"><strong>3D Design Tools</strong> - Visualize your space with precision before execution.</p>
           </div>
-          <div class="space-y-4 text-sm sm:text-base">
-            <div>
-              <h4 class="font-semibold text-gray-800">False Ceilings</h4>
-              <ul class="list-disc list-inside text-gray-600">
-                <li>Gypsum Ceiling</li>
-                <li>POP Ceiling</li>
-                <li>PVC Ceiling</li>
-                <li>Metal Ceiling</li>
-                <li>Vox Ceiling</li>
-                <li>Glass Ceiling</li>
-                <li>Coffered Ceiling</li>
-                <li>Beamed Ceiling</li>
-                <li>Tray Ceiling</li>
-                <li>Vaulted Ceiling</li>
-                <li>Cove Ceiling</li>
-                <li>Wooden Ceiling</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Flooring</h4>
-              <ul class="list-disc list-inside text-gray-600">
-                <li>Tiles</li>
-                <li>Granite</li>
-                <li>Wooden Flooring</li>
-                <li>HPL Flooring</li>
-                <li>Vinyl Flooring</li>
-                <li>Rubber Flooring</li>
-                <li>Grass Flooring</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Wall Decors</h4>
-              <ul class="list-disc list-inside text-gray-600">
-                <li>PVC</li>
-                <li>Wallpaper</li>
-                <li>UV Marble Sheet</li>
-                <li>Louvres</li>
-                <li>Fluted Panel</li>
-                <li>Modelling Bit</li>
-                <li>Sumo Fluted Panel</li>
-                <li>WPC Louvers</li>
-                <li>PU Stone</li>
-                <li>Charcoal</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Wooden Work</h4>
-              <ul class="list-disc list-inside text-gray-600">
-                <li>Master Bed</li>
-                <li>Wardrobe & Glass Wardrobe</li>
-                <li>Studies Table</li>
-                <li>TV Unit</li>
-                <li>Dressing Unit</li>
-                <li>Counter Basin</li>
-                <li>Door & Door Panelling</li>
-                <li>Designer Sofa</li>
-                <li>Office Counter</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Windows</h4>
-              <ul class="list-disc list-inside text-gray-600">
-                <li>UPVC Windows</li>
-                <li>Aluminium & Powder Coated</li>
-                <li>Domal</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Modular Kitchen & More</h4>
-              <ul class="list-disc list-inside text-gray-600">
-                <li>Modular Kitchen</li>
-                <li>ACP Work</li>
-                <li>Tuffen Glass</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Interior Design</h4>
-              <ul class="list-disc list-inside text-gray-600">
-                <li>Home Interior</li>
-                <li>Office Interior</li>
-                <li>Shop Interior</li>
-                <li>Banquet Interior</li>
-                <li>Hotel Interior</li>
-              </ul>
-            </div>
+          <div class="flex items-start">
+            <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
+            <p class="text-gray-600"><strong>Smart Home Integration</strong> - Automate lighting, climate, and security systems.</p>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
+            <p class="text-gray-600"><strong>Eco-Friendly Materials</strong> - Sustainable and safe materials for healthy living.</p>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
+            <p class="text-gray-600"><strong>Space Optimization</strong> - Intelligent layouts to make the most of your space.</p>
           </div>
         </div>
-        <!-- Warranty -->
-        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 offer-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="flex items-center mb-4">
-            <i class="fas fa-shield-alt text-orange-600 text-xl sm:text-2xl mr-2 offer-icon" aria-hidden="true"></i>
-            <h3 class="text-xl sm:text-2xl font-semibold text-orange-600">Warranty</h3>
-          </div>
-          <ul class="list-disc list-inside text-gray-600 mb-4 text-sm sm:text-base">
-            <li><strong>Up to 10 Years Warranty</strong> - on furniture and fittings.</li>
-            <li><strong>Material Assurance</strong> - Only certified, high-quality materials used.</li>
-            <li><strong>Workmanship Guarantee</strong> - Flawless finish and expert craftsmanship backed by warranty.</li>
-            <li><strong>After-Sales Support</strong> - Dedicated service team for maintenance and support.</li>
-          </ul>
+      </div>
+      <!-- Benefits -->
+      <div class="bg-white rounded-xl shadow-lg p-6 offer-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-star text-orange-600 text-2xl mr-3 offer-icon" aria-hidden="true"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold text-orange-600">Benefits</h3>
         </div>
-        <!-- Technology & Science -->
-        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 offer-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="flex items-center mb-4">
-            <i class="fas fa-lightbulb text-orange-600 text-xl sm:text-2xl mr-2 offer-icon" aria-hidden="true"></i>
-            <h3 class="text-xl sm:text-2xl font-semibold text-orange-600">Technology & Science</h3>
-          </div>
-          <div class="space-y-4 mb-4 text-sm sm:text-base">
-            <div class="flex items-start">
-              <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>3D Design Tools</strong> - Visualize your space with precision before execution.</p>
-            </div>
-            <div class="flex items-start">
-              <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>Smart Home Integration</strong> - Automate lighting, climate, and security systems.</p>
-            </div>
-            <div class="flex items-start">
-              <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>Eco-Friendly Materials</strong> - Sustainable and safe materials for healthy living.</p>
-            </div>
-            <div class="flex items-start">
-              <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>Space Optimization</strong> - Intelligent layouts to make the most of your space.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Benefits -->
-        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 offer-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="flex items-center mb-4">
-            <i class="fas fa-shield-alt text-orange-600 text-xl sm:text-2xl mr-2 offer-icon" aria-hidden="true"></i>
-            <h3 class="text-xl sm:text-2xl font-semibold text-orange-600">Benefits</h3>
-          </div>
-          <ul class="list-disc list-inside text-gray-600 mb-4 text-sm sm:text-base">
-            <li><strong>End-to-End Service</strong> - We manage everything from concept to completion.</li>
-            <li><strong>Time-Saving</strong> - Quick project execution with minimal hassle.</li>
-            <li><strong>Boosted Property Value</strong> - Professionally designed spaces enhance resale potential.</li>
-            <li><strong>Tailored Designs</strong> - Interiors that reflect your personality and needs.</li>
-          </ul>
-        </div>
+        <ul class="list-disc list-inside text-gray-600 mb-4 text-sm sm:text-base">
+          <li><strong>End-to-End Service</strong> - We manage everything from concept to completion.</li>
+          <li><strong>Time-Saving</strong> - Quick project execution with minimal hassle.</li>
+          <li><strong>Boosted Property Value</strong> - Professionally designed spaces enhance resale potential.</li>
+          <li><strong>Tailored Designs</strong> - Interiors that reflect your personality and needs.</li>
+        </ul>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
+```
   <!-- Portfolio Section -->
   <section id="portfolio" class="py-12 sm:py-20 bg-gray-50">
     <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
@@ -679,6 +496,7 @@
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="script.js"></script>
 </body>
 </html>
