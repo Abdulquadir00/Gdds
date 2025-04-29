@@ -27,7 +27,7 @@
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Designing Dreams Studio | Interior Design in Patna, Bihar">
   <meta property="og:description" content="Transform your space with our creative and elegant design solutions, from modular kitchens to false ceilings, across Bihar.">
-  <meta property="og:image" content="https://www.designingdreamsstudio.in/img/og-image.jpg">
+  <meta property="og:image" content="https://www.designingdreamsstudio.in/img/logo.webp">
   <meta property="og:image:alt" content="Modern interior design by Designing Dreams Studio in Patna">
   <meta property="og:url" content="https://www.designingdreamsstudio.in">
   <meta property="og:type" content="website">
@@ -44,10 +44,10 @@
   <link rel="canonical" href="https://www.designingdreamsstudio.in">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/logo.svg">
+  <link rel="icon" type="image/png" href="img/logo.ico">
 
   <!-- Preload Critical Resources -->
-  <link rel="preload" href="img/logo.jpg" as="image">
+  <link rel="preload" href="img/logo.webp" as="image">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" as="style">
 
   <!-- Google Analytics -->
@@ -80,7 +80,7 @@
       },
       "telephone": "+917050050786",
       "url": "https://www.designingdreamsstudio.in",
-      "image": "https://www.designingdreamsstudio.in/img/og-image.jpg",
+      "image": "https://www.designingdreamsstudio.in/img/logo.webp",
       "description": "Elegant interior and exterior design solutions in Patna, Bihar, including modular kitchens, false ceilings, and custom wardrobes.",
       "openingHours": "Mo-Sa 09:00-18:00",
       "sameAs": [
@@ -96,7 +96,7 @@
   <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -112,7 +112,7 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <a href="#home" class="logo-container flex items-center space-x-2">
-        <img src="img/logo.jpg" alt="Designing Dreams Studio Logo" class="h-10 w-auto object-contain sm:h-12" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Logo';" />
+        <img src="img/logo.webp" alt="Designing Dreams Studio Logo" class="h-10 w-auto object-contain sm:h-12" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Logo';" />
         <div class="flex flex-col">
           <span class="font-bold text-base sm:text-xl tracking-wide logo-title">Designing Dreams Studio</span>
           <span class="font-semibold text-xs sm:text-sm tracking-wide text-gray-700 logo-subtitle">Interior and Exterior</span>
@@ -225,9 +225,9 @@
   <!-- Hero Section -->
   <header id="home" class="relative w-full h-[60vh] sm:h-screen flex justify-center items-center text-white bg-cover bg-center px-4 sm:px-6" data-aos="fade-in">
     <div class="slideshow absolute inset-0">
-      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 active" style="background-image: url('img/home.jpeg'); background-size: cover; background-position: center;"></div>
-      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('img/home2.jpg'); background-size: cover; background-position: center;"></div>
-      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('img/home3.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 active" style="background-image: url('img/home1.webp'); background-size: cover; background-position: center;"></div>
+      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('img/home2.webp'); background-size: cover; background-position: center;"></div>
+      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('img/home3.webp'); background-size: cover; background-position: center;"></div>
     </div>
     <div class="bg-black bg-opacity-60 w-full h-full absolute top-0 left-0 z-0 hero-overlay"></div>
     <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
@@ -366,20 +366,20 @@
       <p class="text-gray-600 mt-2 text-sm sm:text-base">Explore Our Recent Work</p>
     </div>
     <div class="max-w-6xl mx-auto px-4 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-      <a href="img/Modern Living Room.jpg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Modern Living Room Design" data-aos="zoom-in" data-aos-delay="100">
-        <img src="img/Modern Living Room.jpg" alt="Modern Living Room Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/Modern Living Room.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Modern Living Room Design" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/Modern Living Room.webp" alt="Modern Living Room Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">Modern Living Room</div>
       </a>
-      <a href="img/Contemporary Exterior.jpg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Contemporary Exterior" data-aos="zoom-in" data-aos-delay="200">
-        <img src="img/Contemporary Exterior.jpg" alt="Contemporary Exterior" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/Contemporary Exterior.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Contemporary Exterior" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/Contemporary Exterior.webp" alt="Contemporary Exterior" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">Contemporary Exterior</div>
       </a>
-      <a href="img/Cozy Living Room.jpg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Cozy Living Room" data-aos="zoom-in" data-aos-delay="300">
-        <img src="img/Cozy Living Room.jpg" alt="Cozy Living Room" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/Cozy Living Room.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Cozy Living Room" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/Cozy Living Room.webp" alt="Cozy Living Room" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">Cozy Living Room</div>
       </a>
-      <a href="img/Elegant Garden.jpeg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Elegant Garden Design" data-aos="zoom-in" data-aos-delay="400">
-        <img src="img/Elegant Garden.jpeg" alt="Elegant Garden Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/Elegant_garden.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="portfolio" data-title="Elegant Garden Design" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/Elegant_garden.webp" alt="Elegant Garden Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">Elegant Garden</div>
       </a>
     </div>
@@ -393,20 +393,20 @@
       <p class="text-gray-600 mt-2 text-sm sm:text-base">Discover More of Our Work</p>
     </div>
     <div class="max-w-6xl mx-auto px-4 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-      <a href="img/home.jpeg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="Modular Kitchen Design" data-aos="zoom-in" data-aos-delay="100">
-        <img src="img/home.jpeg" alt="Modular Kitchen Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/Modular-Kitchen-Designs.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="Modular Kitchen Design" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/Modular-Kitchen-Designs.webp" alt="Modular Kitchen Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">Modular Kitchen</div>
       </a>
-      <a href="img/home.jpeg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="False Ceiling Design" data-aos="zoom-in" data-aos-delay="200">
-        <img src="img/home.jpeg" alt="False Ceiling Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/false-ceiling-designs-bedrooms.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="False Ceiling Design" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/false-ceiling-designs-bedrooms.webp" alt="False Ceiling Design" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">False Ceiling</div>
       </a>
-      <a href="img/home.jpeg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="Wooden Wardrobe" data-aos="zoom-in" data-aos-delay="300">
-        <img src="img/home.jpeg" alt="Wooden Wardrobe" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/wooden-wardwore.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="Wooden Wardrobe" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/wooden-wardwore.webp" alt="Wooden Wardrobe" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">Wooden Wardrobe</div>
       </a>
-      <a href="img/home.jpeg" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="Office Interior" data-aos="zoom-in" data-aos-delay="400">
-        <img src="img/home.jpeg" alt="Office Interior" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
+      <a href="img/frontoffice.webp" class="portfolio-img rounded-xl shadow-lg overflow-hidden relative" data-lightbox="gallery" data-title="Office Interior" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/frontoffice.webp" alt="Office Interior" class="w-full h-48 sm:h-64 object-cover" loading="lazy" onerror="this.src='img/placeholder.jpg'; this.alt='Placeholder Image';">
         <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center text-sm sm:text-base">Office Interior</div>
       </a>
     </div>
@@ -490,12 +490,12 @@
     <p class="copyright text-center mt-8 text-gray-400 text-sm sm:text-base">© <span id="year"></span> Designing Dreams Studio. All rights reserved.</p>
   </footer>
 
-  <!-- Back to Top -->
-  <div id="backToTop" class="back-to-top fixed bottom-6 right-6 sm:bottom-6 sm:right-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-orange-600 hover:text-white transition transform hover:scale-110 opacity-0 z-50" onclick="scrollToTop()" aria-label="Back to top">
+  <!-- Back to Top --<div id="backToTop" class="back-to-top fixed bottom-6 right-6 sm:bottom-6 sm:right-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-orange-600 hover:text-white transition transform hover:scale-110 opacity-0 z-50" onclick="scrollToTop()" aria-label="Back to top">
     <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
     </svg>
-  </div>
+  </div>-->
+  
 
   <!-- Scripts -->
   <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
