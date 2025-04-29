@@ -1,8 +1,10 @@
-
-/* Custom CSS for enhanced mobile responsiveness and service focus */
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f3f4f6;
+    color: #1f2937;
 }
 
 .container {
@@ -11,121 +13,276 @@ body {
     padding-right: 1rem;
 }
 
+/* Navigation */
 .nav-menu a, .mobile-menu a {
-    transition: color 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: color 0.3s ease-in-out;
+    color: #1f2937;
+}
+
+.nav-menu a:hover, .mobile-menu a:hover {
+    color: #f97316;
+}
+
+.hamburger {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 60;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburger:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #f97316;
+}
+
+.hamburger svg .hamburger-line {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hamburger[data-menu-open="true"] .hamburger-line:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+}
+
+.hamburger[data-menu-open="true"] .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger[data-menu-open="true"] .hamburger-line:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
 }
 
 .mobile-menu {
-    transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: translateY(-100%);
-}
-
-.mobile-menu.active {
-    transform: translateY(0);
-}
-
-.modal-content {
-    width: 90%;
-    max-width: 500px;
-    max-height: 90vh;
+    opacity: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 4rem 1rem 1rem;
     overflow-y: auto;
 }
 
+.mobile-menu[data-menu-open="true"] {
+    transform: translateY(0);
+    opacity: 1;
+    display: block;
+}
+
+.mobile-menu.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Modal */
+.modal-content {
+    width: 91.666667%;
+    max-width: 28rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal-content:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #f97316;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.error-message a {
+    color: #ef4444;
+    transition: color 0.3s ease-in-out;
+}
+
+.error-message a:hover {
+    color: #dc2626;
+}
+
+/* Hero Slideshow */
 .slideshow .slide {
     background-size: cover;
     background-position: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideshow .slide.active {
+    opacity: 1;
 }
 
 .hero-overlay {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* Offer Cards */
 .offer-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .offer-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Portfolio and Gallery Images */
 .portfolio-img img {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .portfolio-img:hover img {
     transform: scale(1.05);
 }
 
+/* WhatsApp and Back-to-Top Icons */
 .whatsapp-icon {
     position: fixed;
-    bottom: 2rem;
+    bottom: 5rem;
     right: 1.5rem;
     z-index: 50;
+    transition: transform 0.3s ease-in-out;
 }
 
 .back-to-top {
+    position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
+    z-index: 50;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Navigation Icon */
+/* Navigation Icons */
 .nav-icon {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
-/* Enhanced Accordion Styles */
+/* Accordion Styles */
+.accordion-container {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
 .accordion-button {
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     cursor: pointer;
-    border-radius: 8px;
-    position: relative;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(249, 115, 22, 0.1));
 }
 
 .accordion-button:hover {
-    background: linear-gradient(to right, rgba(254, 243, 199, 0.95), rgba(249, 115, 22, 0.2));
+    background-color: #fef7ed;
     color: #f97316;
-    transform: translateX(2px);
 }
 
 .accordion-button[aria-expanded="true"] {
-    background: linear-gradient(to right, rgba(255, 247, 237, 0.95), rgba(249, 115, 22, 0.3));
+    background-color: #fff7ed;
     color: #f97316;
 }
 
 .accordion-button:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 0 0 2px #f97316, 0 0 0 4px #ffffff;
 }
 
 .accordion-content {
-    transition: all 0.3s ease;
-    max-height: 0;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
     overflow: hidden;
+    height: 0;
+    opacity: 0;
+    padding: 0 0.75rem;
 }
 
-.accordion-content[x-show] {
-    max-height: 600px; /* Increased to accommodate CTA buttons */
-    display: block !important; /* Ensure visibility */
+.accordion-content[x-show="true"] {
+    height: auto !important;
+    opacity: 1 !important;
+    padding: 0.75rem !important;
 }
 
-/* Service Thumbnail Styling */
+/* Service Thumbnail */
 .accordion-button img {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0.125rem;
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    display: block; /* Always show, as script.js ensures image */
 }
 
 .accordion-button:hover img {
     transform: scale(1.1);
 }
 
-/* Loading and Error State Styles */
+/* Accordion Icons */
+.accordion-button i {
+    color: #f97316;
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+    display: inline-block; /* Always show, as script.js ensures icon */
+}
+
+/* Fallback Message */
+.accordion-fallback {
+    padding: 1rem;
+    text-align: center;
+    color: #4b5563;
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* X-Cloak to Prevent FOUC */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Animations */
 .animate-pulse {
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite ease-in-out;
 }
 
 @keyframes pulse {
@@ -134,33 +291,54 @@ body {
     100% { opacity: 1; }
 }
 
-.text-red-600 a {
-    transition: color 0.3s ease;
+/* Error Messages */
+.text-red-500 a {
+    transition: color 0.3s ease-in-out;
+    color: #ef4444;
 }
 
-.text-red-600 a:hover {
-    color: #e11d48;
+.text-red-500 a:hover {
+    color: #dc2626;
 }
 
-/* Ensure accordion visibility */
-[x-show] {
-    display: block !important;
-}
-
-[x-show="false"] {
-    display: none !important;
-}
-
-/* Accessibility Enhancements */
+/* Accessibility */
 .accordion-button:focus-visible {
-    outline: 2px solid #f97316;
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: 0 0 0 2px #f97316, 0 0 0 4px #ffffff;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Cross-Browser Fixes */
+@supports (-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px)) {
+    .modal-content {
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+@supports not (backdrop-filter: blur(8px)) {
+    .modal-content {
+        background-color: #ffffff;
+    }
 }
 
 /* Media Queries */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 80rem;
+    }
+}
+
 @media (max-width: 768px) {
     .logo-container img {
-        max-width: 120px;
+        height: 2.5rem;
     }
     .logo-title {
         font-size: 1rem;
@@ -169,31 +347,31 @@ body {
         font-size: 0.75rem;
     }
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .hero-section p {
         font-size: 1rem;
     }
     .section-heading {
-        font-size: 2rem;
+        font-size: 1.875rem;
     }
     .offer-card {
         padding: 1rem;
     }
     .offer-card h3 {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
     .offer-card ul {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
     }
-    .portfolio-img img, .gallery-img img {
-        height: 200px;
+    .portfolio-img img {
+        height: 12rem;
     }
     .contact-info {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
     .map-container iframe {
-        height: 300px;
+        height: 16rem;
     }
     .footer-section {
         text-align: center;
@@ -204,80 +382,20 @@ body {
     .whatsapp-icon {
         right: 1rem;
         padding: 0.75rem;
+        bottom: 4rem;
     }
     .nav-icon {
-        width: 18px;
-        height: 18px;
+        width: 1rem;
+        height: 1rem;
     }
     .accordion-button {
-        font-size: 1rem;
-        padding: 0.75rem;
-    }
-    .accordion-content {
-        font-size: 0.9rem;
-    }
-    .accordion-button img {
-        width: 24px;
-        height: 24px;
-    }
-    /* Loading and Error State Adjustments */
-    .animate-pulse {
-        font-size: 0.9rem;
-    }
-    .text-red-600 {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 640px) {
-    .hero-section h1 {
-        font-size: 1.75rem;
-    }
-    .hero-section p {
-        font-size: 0.9rem;
-    }
-    .quote-btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-    .modal-content {
-        padding: 1rem;
-    }
-    .form-input {
-        padding: 0.75rem;
-    }
-    .section-heading {
-        font-size: 1.75rem;
-    }
-    .portfolio-img img, .gallery-img img {
-        height: 150px;
-    }
-    .contact-item {
-        font-size: 0.9rem;
-    }
-    .nav-icon {
-        width: 16px;
-        height: 16px;
-    }
-    .accordion-button {
-        font-size: 0.9rem;
         padding: 0.5rem;
     }
-    .accordion-content {
-        font-size: 0.85rem;
-    }
     .accordion-button img {
-        width: 20px;
-        height: 20px;
+        width: 1.5rem;
+        height: 1.5rem;
     }
-    /* Loading and Error State Adjustments */
-    .animate-pulse {
-        font-size: 0.85rem;
+    .accordion-button i {
+        font-size: 1rem;
     }
-    .text-red-600 {
-        font-size: 0.85rem;
-    }
-}
-.text-orange-600.text-3xl, .text-orange-600.text-2xl, .text-orange-600.text-xl, .text-orange-600.mt-1 {
-    font-weight: bold; /* Ensure placeholders are visible */
 }
