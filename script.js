@@ -2,29 +2,130 @@
     // Function to register Alpine.js component
     document.addEventListener('alpine:init', () => {
         Alpine.data('accordionServiceData', () => ({
-          open: null,
-          categories: [
-            {
-              name: 'False Ceilings',
-              icon: 'fas fa-home',
-              items: ['Gypsum Ceiling', 'POP Ceiling', 'PVC Ceiling']
-            },
-            {
-              name: 'Flooring',
-              icon: 'fas fa-ruler-combined',
-              items: ['Tiles', 'Granite', 'Wooden Flooring']
-            },
-            {
-              name: 'Wall Decors',
-              icon: 'fas fa-paint-roller',
-              items: ['PVC', 'Wallpaper', 'UV Marble Sheet']
-            }
-          ],
+            open: null,
+            categories: [
+              {
+                name: 'Modular Kitchen',
+                icon: 'fas fa-kitchen-set',
+                items: [
+                  'Base Cabinets',
+                  'Wall Cabinets',
+                  'Tall Units',
+                  'Island Counter',
+                  'Granite Countertop',
+                  'Quartz Countertop',
+                  'Pull-Out Drawers',
+                  'Corner Carousels',
+                  'Built-In Oven Cabinet',
+                  'Sink Unit',
+                  'Dishwasher Module',
+                  'Breakfast Counter'
+                ]
+              },
+              {
+                name: 'False Ceilings',
+                icon: 'fas fa-home',
+                items: [
+                  'Gypsum Ceiling',
+                  'POP Ceiling',
+                  'PVC Ceiling',
+                  'Metal Ceiling',
+                  'Vox Ceiling',
+                  'Glass Ceiling',
+                  'Coffered Ceiling',
+                  'Beamed Ceiling',
+                  'Tray Ceiling',
+                  'Vaulted Ceiling',
+                  'Cove Ceiling',
+                  'Wooden Ceiling'
+                ]
+              },
+              {
+                name: 'Flooring',
+                icon: 'fas fa-ruler-combined',
+                items: [
+                  'Tiles',
+                  'Granite',
+                  'Wooden Flooring',
+                  'HPL Flooring',
+                  'Vinyl Flooring',
+                  'Rubber Flooring',
+                  'Grass Flooring',
+                  'Etc.'
+                ]
+              },
+              {
+                name: 'Wall Decors',
+                icon: 'fas fa-paint-roller',
+                items: [
+                  'PVC',
+                  'Wallpaper',
+                  'UV Marble Sheet',
+                  'Louvres',
+                  'Fluted Panel',
+                  'Modelling Bit',
+                  'Sumo Fluted Panel',
+                  'WPC Louvers',
+                  'PU Stone',
+                  'Charcoal'
+                ]
+              },
+              {
+                name: 'Wooden Work',
+                icon: 'fas fa-briefcase',
+                items: [
+                  'Master Bed',
+                  'Wardrobe & Glass Wardrobe',
+                  'Studies Table',
+                  'TV Unit',
+                  'Dressing Unit',
+                  'Counter Basin',
+                  'Door & Door Panelling',
+                  'Designer Sofa',
+                  'Office Counter'
+                ]
+              },
+              {
+                name: 'Windows',
+                icon: 'fas fa-window-maximize',
+                items: [
+                  'UPVC Windows',
+                  'Aluminium & Powder Coated',
+                  'Domal'
+                ]
+              }
+            ],
           toggleAccordion(index) {
             this.open = this.open === index ? null : index;
           },
           openModalWithService(service) {
-            alert('Quote request for: ' + service);
+            const modal = document.getElementById('contactModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                modal.setAttribute('aria-hidden', 'false');
+                const firstInput = document.getElementById('contactName');
+                if (firstInput) firstInput.focus();
+
+                const focusableElements = modal.querySelectorAll('input, button, [tabindex="0"]');
+                const firstFocusable = focusableElements[0];
+                const lastFocusable = focusableElements[focusableElements.length - 1];
+
+                modal.addEventListener('keydown', (e) => {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey && document.activeElement === firstFocusable) {
+                            e.preventDefault();
+                            lastFocusable.focus();
+                        } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                            e.preventDefault();
+                            firstFocusable.focus();
+                        }
+                    }
+                });
+                console.log('Contact modal opened');
+            } else {
+                console.error('Contact modal not found');
+            }
           }
         }));
       });
@@ -309,20 +410,20 @@
         });
 
         // Back to Top Button
-        const backToTopButton = document.getElementById('backToTop');
-        if (backToTopButton) {
-            window.addEventListener('scroll', () => {
-                backToTopButton.classList.toggle('opacity-100', window.scrollY > 400);
-                backToTopButton.classList.toggle('opacity-0', window.scrollY <= 400);
-            }, { passive: true });
-        } else {
-            console.warn('Back to top button not found');
-        }
+        //const backToTopButton = document.getElementById('backToTop');
+        //if (backToTopButton) {
+        //    window.addEventListener('scroll', () => {
+         //       backToTopButton.classList.toggle('opacity-100', window.scrollY > 400);
+        //        backToTopButton.classList.toggle('opacity-0', window.scrollY <= 400);
+          //  }, { passive: true });
+        //} else {
+        //    console.warn('Back to top button not found');
+       // }
 
-        window.scrollToTop = () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            console.log('Scrolled to top');
-        };
+      //  window.scrollToTop = () => {
+        //    window.scrollTo({ top: 0, behavior: 'smooth' });
+           // console.log('Scrolled to top');
+       // };
 
         // Form Validation and Submission
         const form = document.getElementById('contactForm');
